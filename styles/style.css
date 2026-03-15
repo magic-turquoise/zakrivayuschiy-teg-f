@@ -15,6 +15,100 @@
   min-block-size: 100dvb;
   font-family: var(--font-inter-name), 'Arial', 'Helvetica', sans-serif;
   font-variation-settings: 'wght' var(--font-inter-weight-text), 'slnt' 0;
+  background-image: var(--page-gradient);
+  background-size: cover;      
+  background-attachment: fixed;
+  padding: var(--page-padding);
+  display: grid;  
+  justify-content: center; 
+  align-content: start;             
 }
 
+.header {
+  width: var(--block-width);
+  min-height: var(--header-min-height);
+  background-color: #ffffff;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  font-family: var(--font-press-name);
+  color: #000;
+  font-weight: 400; 
+  text-transform: uppercase;
+  line-height: 100%;
+ }
 
+.header__title { 
+  font-size: var(--header-title-font-size);
+  justify-self: center;
+  align-self: end;
+}
+
+.header__subtitle {
+  font-size: var(--header-subtitle-font-size);
+  justify-self: center;
+  align-self: start;
+}
+
+.content {
+  width: var(--block-width);
+  display: grid;
+  grid-template-rows: repeat(8, auto);
+  gap: var(--content-gap);
+}
+
+.card {
+  display: grid;
+  border: 2px solid #000;
+  background-color: #ffffff;
+}
+
+.card__title {
+  font-family: var(--font-inter-name);
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 715;
+  letter-spacing: 0;
+}
+
+.card__picture-image {
+  width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.card__content {
+  display: grid;
+  grid-template-rows: repeat(3,auto);
+  padding: 25px;
+  gap: 25px;
+}
+
+.card__like-button {
+  justify-self: end;
+  align-self: center;
+  width: 130px;
+  height: 38px;
+  font-size: 14px;
+  line-height: 90%;
+  font-weight: 400;
+  color: #000;
+  border: 2px solid #000;
+  padding: 9px 17px;
+  background: transparent;
+  font-family:  var(--font-press-name);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 90%;
+}
+
+@media (min-width <=375px) {
+  :root {
+    --page-padding: 100px 0 0 0;
+    --block-width: clamp(375px, 50vw, 100vw); 
+    --header-min-height: 327px;  
+            
+
+  }
+}
