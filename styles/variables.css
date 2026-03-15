@@ -1,1 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+.root {
+--font-inter-name: 'Inter-Variable';
+--font-press-name: 'PressStart2P';
+--font-inter-weight-title: 715;
+--font-inter-weight-text: 410;
+}
