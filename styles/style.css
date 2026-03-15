@@ -19,9 +19,9 @@
   background-size: cover;      
   background-attachment: fixed;
   padding: var(--page-padding);
-  display: grid;  
-  justify-content: center; 
-  align-content: start;             
+  display: grid;
+  justify-content: center;
+  align-content: start;
 }
 
 .header {
@@ -33,12 +33,12 @@
   gap: 20px;
   font-family: var(--font-press-name);
   color: #000;
-  font-weight: 400; 
+  font-weight: 400;
   text-transform: uppercase;
   line-height: 100%;
  }
 
-.header__title { 
+.header__title {
   font-size: var(--header-title-font-size);
   justify-self: center;
   align-self: end;
@@ -107,8 +107,6 @@
   :root {
     --page-padding: 100px 0 0 0;
     --block-width: clamp(375px, 50vw, 100vw); 
-    --header-min-height: 327px;  
-            
-
+    --header-min-height: 327px;
   }
 }
