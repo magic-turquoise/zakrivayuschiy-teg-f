@@ -8,10 +8,9 @@
                  repeating-linear-gradient(#d3d3d3, transparent 4px),
                  repeating-linear-gradient(to right, #d3d3d3, transparent 4px);
 --page-padding: 100px 370px 0 370px;
---block-width: clamp(700px, 50vw, 1440px);
+--block-width: 700px;
 --header-min-height: 368px;
 --header-title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 --header-subtitle-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 --content-gap: 50px;
-
 }

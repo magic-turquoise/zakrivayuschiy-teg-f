@@ -13,12 +13,9 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-inter-name), 'Arial', 'Helvetica', sans-serif;
-  font-variation-settings: 'wght' var(--font-inter-weight-text), 'slnt' 0;
   background-image: var(--page-gradient);
   background-size: cover;
   background-attachment: fixed;
-  padding: var(--page-padding);
   display: grid;
   justify-content: center;
   align-content: start;
@@ -27,11 +24,14 @@
 .header {
   width: var(--block-width);
   min-height: var(--header-min-height);
+  margin-top: 100px;
+  margin-bottom: 100px;
   background-color: #ffffff;
+  border: 2px solid #000;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
-  font-family: var(--font-press-name);
+  row-gap: 20px;
+  font-family: var(--font-press-name), sans-serif;
   color: #000;
   font-weight: 400;
   text-transform: uppercase;
@@ -46,6 +46,7 @@
 
 .header__subtitle {
   font-size: var(--header-subtitle-font-size);
+  margin-top: 20px;
   justify-self: center;
   align-self: start;
 }
@@ -61,56 +62,72 @@
   display: grid;
   border: 2px solid #000;
   background-color: #ffffff;
-  font-family: var(--font-inter-name);
+  font-family: var(--font-inter-name), 'Arial', 'Helvetica', sans-serif;
   font-size: 18px;
 }
 
 .card__title {
+  height: 28px;
+  padding: 5px 10px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 18px;
+  font-weight: var(--font-inter-weight-title);
   line-height: 100%;
-  font-weight: 715;
-  font-style: Black;
-  margin-left: 10px;
- }
+}
 
 .card__text {
-  line-height: 21px;
-  font-weight: 410;
-  font-style: Regular;
+  font-weight: var(--font-inter-weight-text);
+  line-height: 21px; 
  }
+
+.card__picture {
+  height: 696px;
+  border-block: 2px;
+  /*border-width: 2px 0px 2px 0px; 
+  border-style: solid;
+  border-color: #000000;*/
+}
 
 .card__picture-image {
   width: 100%;
-  min-height: 100%;
-  max-height: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
+
+}
+
+.card-filter-saturate {
+  filter: saturate(65%) contrast(150%);
+}
+.card-filter-brightness {
+  filter: brightness(75%);
 }
 
 .card-filter-grayscale {
   filter: grayscale(0.7);
 }
 
-.card-filter-saturate {
-  filter: saturate(500%);
-}
 
-.card-filter-brightness {
+
+.card-filter-sepia {
   filter: sepia(30%);
 }
 
 .card-filter-invert {
-  filter: invert(0.8);
+  filter: saturate(65%) invert(0.8);
 }
 
 .card-filter-sepia {
-  filter: sepia(80%);
+  filter: saturate(65%) sepia(80%);
 }
 
 .card-filter-blur {
-  filter: blur(0.7rem)
+  filter: saturate(65%) blur(0.7rem)
 }
 
 .card-filter-rotate {
-  filter: hue-rotate(125deg) opacity(0.5);
+  filter: saturate(65%) hue-rotate(125deg) opacity(0.5);
 }
 
 .card__content {
@@ -119,8 +136,6 @@
   padding: 25px;
   gap: 25px;
 }
-
-
 
 .card__like-button {
   justify-self: end;
@@ -143,4 +158,9 @@
     --block-width: clamp(375px, 50vw, 100vw); 
     --header-min-height: 327px;
   }
+
+  .card__title {
+  min-height: 30px;
+  padding: 4px 10px;
+}
 }
