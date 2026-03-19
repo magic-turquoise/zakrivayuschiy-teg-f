@@ -19,22 +19,20 @@
   display: grid;
   justify-content: center;
   align-content: start;
-  /*padding: 100px var(--page-padding);*/
   padding: 100px 370px;
 }
 
 .header {
   width: var(--block-width);
   min-height: var(--header-min-height);
-  /*margin-top: 100px;*/
   margin-bottom: 100px;
-  background-color: #ffffff;
-  border: 2px solid #000;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-black);
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   row-gap: 20px;
   font-family: var(--font-press-name), sans-serif;
-  color: #000;
+  color: var(--color-black);
   font-weight: 400;
   text-transform: uppercase;
   line-height: 100%;
@@ -62,8 +60,8 @@
 
 .card {
   display: grid;
-  border: 2px solid #000;
-  background-color: #ffffff;
+  border: 2px solid var(--color-black);
+  background-color: var(--color-white);
   font-family: var(--font-inter-name), 'Arial', 'Helvetica', sans-serif;
   font-size: 18px;
 }
@@ -88,7 +86,7 @@
   width: 100%;
   border-width: 2px 0px 2px 0px;
   border-style: solid;
-  border-color: #000000;
+  border-color: var(--color-black);
   /*border-block: 2px;*/
 }
 
@@ -104,12 +102,17 @@
   text-transform: uppercase;
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow: -1px -1px #ffffff, 1px -1px #ffffff, -1px 1px #ffffff , 1px 1px #ffffff;
- /* 
-angle: 0 deg;
-border-width: 1px;
-;*/
-}
+  text-shadow: -1px -1px var(--color-white), 1px -1px var(--color-white),
+               -1px 1px var(--color-white), 1px 1px var(--color-white);
+ }
+
+ @supports((text-stroke: 1px var(--color-white)) or (-webkit-text-stroke: 1px var(--color-white))) {
+  .card__label {
+    -webkit-text-stroke: 1px var(--color-white);
+    text-stroke: 1px var(--color-white);
+    text-shadow: none;
+  }
+} 
 
 .card__picture-image {
   width: 100%;
@@ -154,7 +157,7 @@ border-width: 1px;
   gap: 25px;
 }
 
-.card__button {
+.card__button-container {
   justify-self: end;
   align-self: center;
   display: grid;
@@ -166,7 +169,7 @@ border-width: 1px;
 .card__icon-button {
   width: 40px;
   height: 38px;
-  color: #000;
+  color: var(--color-black);
   background: transparent;
   border: none;
 }
@@ -175,10 +178,17 @@ border-width: 1px;
   font-size: 14px;
   line-height: 90%;
   font-weight: 400;
-  color: #000;
-  border: 2px solid #000;
+  color: var(--color-black);
+  border: 2px solid var(--color-black);
   background: transparent;
   font-family:  var(--font-press-name);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--color-black);
 }
 
 .card__like-button {
@@ -188,34 +198,100 @@ border-width: 1px;
 }
 
 .footer__button {
-  justify-self: center;
   width: var(--footer-button-width);
   height: var(--footer-button-height);
   padding: 15px 20px;
-  display: flex;
-  justify-content: start;
-  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-self: center;
+  align-self: center;  
   gap: 8px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .button__text {
+  justify-self: center;
+  align-self: center;
   white-space: nowrap;
 }
 
+.disk-large {
+  justify-self: center;
+  align-self: center;
+  width: 39px;
+  height: auto;
+}
+
 .disk-small {
+  justify-self: center;
+  align-self: center;
   width: 21px;
   height: auto;
+}
+
+dialog {
+  display: none;
+}
+
+
+dialog[open] {
+  position: fixed;
+  inset: 0;
+  inline-size: var(--memory-dialog-width);
+  block-size: 191px;
+  border: 2px solid var(--color-black);
+  background-color: var(--color-white);
+  display: grid;
+  justify-self: center;
+  gap: 30px;
+}
+
+.dialog__content {
+  inline-size: var(--dialog-content-width);
+  block-size: 63px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-self: center;
+  align-self: center;  
+  gap: 8px;
+}
+
+.dialog__text {
+  display: block;
+  inline-size: 234px;;
+  block-size: 63px;
+  justify-self: center;
+  align-self: center;
+  font-family: var(--font-press-name), sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.dialog__button {
+  inline-size: var(--dialog-button-width);
+  block-size: 38px;
+  padding: 9px 17px;
+  justify-self: center;
+  align-self: center;  
+  border: 2px solid var(--color-black);
+  background: transparent;
 }
 
 
 @media (min-width <=375px) {
   :root {
     /*--page-padding: 0;*/
-    --block-width: clamp(375px, 50vw, 100vw);
+    --block-width: 375px;
     --header-min-height: 327px;
     --footer-button-width: 306px;
     --footer-button-height: 84px;
+    --memory-dialog-width: 341px;
+    --dialog-content-width: 261px;
+    --dialog-button-width: 261px;
   }
 
   .page {
