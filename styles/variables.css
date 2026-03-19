@@ -21,3 +21,29 @@
 --dialog-content-width: 293px;
 --dialog-button-width: 293px;
 }
+
+
+/**************************************************************
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* можно заменить на нужный цвет 
+  
+  transform-origin: left;
+  transform: scaleX(0);
+  
+  transition: transform 0.5s ease-in-out;
+  z-index: -1; /* чтобы не закрывать текст 
+}
+
+.button:hover {
+  color: black; /* плавный переход цвета 
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+/******************************************************/
