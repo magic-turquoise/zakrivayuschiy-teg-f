@@ -181,7 +181,7 @@
 }
 
 .card__icon-button:focus {
-  outline: none; 
+  outline: none;
 }
 
 .button {
@@ -219,7 +219,7 @@
  }
 
 .button:hover::after {
- width: 100%; 
+  width: 100%;
 }
 
 .button__text {
@@ -232,8 +232,7 @@
   mix-blend-mode: difference;
 }
 
-/**********************************************/
- .card__like-button {
+.card__like-button {
   width: 130px;
   height: 38px;
   padding: 9px 17px;
