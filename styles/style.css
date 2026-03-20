@@ -210,13 +210,15 @@
 .button::after {
   content: '';
   position: absolute;
-  top: 0; left: 0; bottom: 0; 
+  top: 0;
+  left: 0;
+  bottom: 0;
   width: 0%;
   height: 100%;
   background-color: var(--color-black);
  transition: width 0.5s ease-in-out; 
  z-index: 1;
- }
+}
 
 .button:hover::after {
   width: 100%;
@@ -245,7 +247,7 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   justify-self: center;
-  align-self: center;  
+  align-self: center;
   gap: 8px;
   background-color: var(--color-white);
 }
@@ -290,13 +292,13 @@ dialog[open] {
   display: grid;
   grid-template-columns: repeat(2, auto);
   justify-self: center;
-  align-self: center;  
+  align-self: center;
   gap: 8px;
 }
 
 .dialog__text {
   display: block;
-  inline-size: 234px;;
+  inline-size: 234px;
   block-size: 63px;
   justify-self: center;
   align-self: center;
@@ -314,7 +316,7 @@ dialog[open] {
   block-size: 38px;
   padding: 9px 17px;
   justify-self: center;
-  align-self: center;  
+  align-self: center;
   border: 2px solid var(--color-black);
   background: transparent;
 }
@@ -330,8 +332,8 @@ dialog[open] {
 }
 
 .like-icon.is-liked .countour {
-  fill: var(--heart-main-body-active-color);     
-  transition-delay: 0.06s;   
+  fill: var(--heart-main-body-active-color);
+  transition-delay: 0.06s;
 }
 
 
@@ -340,18 +342,18 @@ dialog[open] {
 }
 
 .like-icon:hover .core {
-  fill: var(--heart-core-hover-color);      
-  transition-delay: 0s;   
+  fill: var(--heart-core-hover-color);
+  transition-delay: 0s;
 }
 
 .like-icon:active .core {
-  fill: var(--heart-core-active-color);      
-  transition-delay: 0.05s;   
+  fill: var(--heart-core-active-color);
+  transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--heart-core-active-color);      
-  transition-delay: 0s;   
+  fill: var(--heart-core-active-color);
+  transition-delay: 0s;
 }
 
 
@@ -361,18 +363,18 @@ dialog[open] {
 }
 
 .like-icon:hover .main-body {
-  fill: var(--heart-main-body-hover-color);     
-  transition-delay: 0.05s;   
+  fill: var(--heart-main-body-hover-color);
+  transition-delay: 0.05s;
 }
 
 .like-icon:active .main-body {
-  fill: var(--heart-main-body-active-color);     
-  transition-delay: 0.05s;   
+  fill: var(--heart-main-body-active-color);
+  transition-delay: 0.05s;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--heart-main-body-active-color);     
-  transition-delay: 0.05s;   
+  fill: var(--heart-main-body-active-color);
+  transition-delay: 0.05s;
 }
 
 
