@@ -9,3 +9,43 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+.like-icon {
+  transform-origin: center;
+}
+
+@keyframes heart-scale-up {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.25);
+  }
+}
+
+@keyframes sparks-fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.is-liked .heart {
+  animation-name: heart-scale-up;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards; 
+  animation-iteration-count: 1;
+}
+
+.is-liked .sparks {
+  animation-name: sparks-fade;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards; 
+  animation-iteration-count: 1;
+}

@@ -162,7 +162,7 @@
   align-self: center;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 7px;
+  gap: 5px;
   align-items: center;
 }
 
@@ -171,7 +171,17 @@
   height: 38px;
   color: var(--color-black);
   background: transparent;
-  border: none;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--color-black);
+}
+
+.card__icon-button:focus {
+  outline: none; 
 }
 
 .button {
@@ -185,8 +195,6 @@
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
-  transition: color 0.5s ease-in-out;
-  overflow: visible; 
 }
 
 .button:focus {
@@ -194,6 +202,37 @@
   box-shadow: 2px 2px 0px 0px var(--color-black);
 }
 
+/********************ИЗМЕНЕНИЕ ЦВЕТА КНОПОК**************************/
+.button:hover {
+  transition: background-color 0.5s ease-in-out;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0; 
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-black);
+ transition: width 0.5s ease-in-out; 
+ z-index: 1;
+ }
+
+.button:hover::after {
+ width: 100%; 
+}
+
+.button__text {
+  justify-self: center;
+  align-self: center;
+  white-space: nowrap;
+  position: relative; 
+  z-index: 2;
+  color: var(--color-white);
+  mix-blend-mode: difference;
+}
+
+/**********************************************/
  .card__like-button {
   width: 130px;
   height: 38px;
@@ -212,12 +251,6 @@
   background-color: var(--color-white);
 }
 
-.button__text {
-  justify-self: center;
-  align-self: center;
-  white-space: nowrap;
-}
-
 .disk-large {
   justify-self: center;
   align-self: center;
@@ -230,6 +263,9 @@
   align-self: center;
   width: 21px;
   height: auto;
+  /*position: relative; 
+  z-index: 2;
+  mix-blend-mode: difference;*/
 }
 
 dialog {
@@ -282,6 +318,62 @@ dialog[open] {
   align-self: center;  
   border: 2px solid var(--color-black);
   background: transparent;
+}
+
+/*****************HEART*************************************************/
+
+.sparks {
+  opacity: 0;
+}
+
+.countour {
+  transition: fill 0.1s linear;
+}
+
+.like-icon.is-liked .countour {
+  fill: var(--heart-main-body-active-color);     
+  transition-delay: 0.06s;   
+}
+
+
+.core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon:hover .core {
+  fill: var(--heart-core-hover-color);      
+  transition-delay: 0s;   
+}
+
+.like-icon:active .core {
+  fill: var(--heart-core-active-color);      
+  transition-delay: 0.05s;   
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-core-active-color);      
+  transition-delay: 0s;   
+}
+
+
+
+.main-body {
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--heart-main-body-hover-color);     
+  transition-delay: 0.05s;   
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-main-body-active-color);     
+  transition-delay: 0.05s;   
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-main-body-active-color);     
+  transition-delay: 0.05s;   
 }
 
 
