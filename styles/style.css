@@ -163,14 +163,14 @@
   block-size: 38px;
   justify-self: end;
   align-self: center;
-  margin-right: 25px;
+  margin-right: 35px;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 7px;
+  gap: 5px;
 }
 
 .card__icon-button {
-  width: 40px;
+  width: 50px;
   height: 38px;
   justify-self: center;
   align-self: center;
@@ -179,8 +179,10 @@
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
   cursor: pointer;
-  box-sizing: border-box;
- }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .card__icon-button:focus-visible {
   border-color: var(--color-black);
@@ -211,7 +213,7 @@
 /********************ИЗМЕНЕНИЕ ЦВЕТА КНОПОК**************************/
 .button:hover {
   transition: background-color 0.5s ease-in-out;
-}
+ }
 
 .button::after {
   content: '';
@@ -235,6 +237,16 @@
   align-self: center;
   white-space: nowrap;
   position: relative;
+  z-index: 2;
+  color: var(--color-white);
+  mix-blend-mode: difference;
+}
+
+.disk-small {
+  justify-self: center;
+  align-self: center;
+  width: 21px;
+  height: auto;
   z-index: 2;
   color: var(--color-white);
   mix-blend-mode: difference;
@@ -265,16 +277,6 @@
   align-self: center;
   width: 39px;
   height: auto;
-}
-
-.disk-small {
-  justify-self: center;
-  align-self: center;
-  width: 21px;
-  height: auto;
-  /*position: relative; 
-  z-index: 2;
-  mix-blend-mode: difference;*/
 }
 
 dialog {
@@ -364,8 +366,6 @@ dialog[open] {
   transition-delay: 0s;
 }
 
-
-
 .main-body {
   transition: fill 0.3s linear;
 }
@@ -388,7 +388,6 @@ dialog[open] {
 
 @media (min-width <=375px) {
   :root {
-    /*--page-padding: 0;*/
     --block-width: 375px;
     --card-picture-height: 375px;
     --header-min-height: 327px;
