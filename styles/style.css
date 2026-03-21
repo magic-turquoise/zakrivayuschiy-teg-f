@@ -163,7 +163,7 @@
   block-size: 38px;
   justify-self: end;
   align-self: center;
-  margin-right: 25px; 
+  margin-right: 25px;
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 7px;
@@ -234,7 +234,7 @@
   justify-self: center;
   align-self: center;
   white-space: nowrap;
-  position: relative; 
+  position: relative;
   z-index: 2;
   color: var(--color-white);
   mix-blend-mode: difference;
@@ -300,7 +300,7 @@ dialog[open] {
   justify-self: center;
   align-self: center;
   display: grid;
-  grid-template-columns: repeat(2, auto);  
+  grid-template-columns: repeat(2, auto);
   gap: 8px;
 }
 
