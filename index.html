@@ -329,21 +329,19 @@
       
     </main>
     <script src="./scripts/like.js"></script>
+
+    <dialog class="dialog__window" id="memory_dialog">
+      <div class="dialog__content">
+        <svg class="disk-large" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
+          <use href="#disk"></use>
+        </svg>  
+        <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+      </div>
+      <button class="button dialog__button" 
+       onclick="window['memory_dialog'].close();" ><span class="button__text">OK</span></button>
+    </dialog>
   </body>
  
- 
-  <dialog class="dialog__window" id="memory_dialog">
-    <div class="dialog__content">
-      <svg class="disk-large" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 39">
-        <use href="#disk"></use>
-      </svg>  
-      <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
-    </div>
-    <button class="button dialog__button" 
-     onclick="window['memory_dialog'].close();" ><span class="button__text">OK</span></button>
-  </dialog>
-
-
   <svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" fill="none" viewBox="0 0 39 39">
     <symbol id="disk">
     <path fill="#000" d="M0 0h3v3H0zM0 3h3v3H0zM0 6h3v3H0zM0 9h3v3H0zM0 12h3v3H0zM0 15h3v3H0zM0 18h3v3H0zM0

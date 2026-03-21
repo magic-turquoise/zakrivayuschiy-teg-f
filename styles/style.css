@@ -16,16 +16,16 @@
   background-image: var(--page-gradient);
   background-size: cover;
   background-attachment: fixed;
+  margin: 0;
   display: grid;
-  justify-content: center;
-  align-content: start;
+  grid-template-rows: repeat(2, auto);
+  gap: 100px;
   padding: 100px 370px;
 }
 
 .header {
   width: var(--block-width);
   min-height: var(--header-min-height);
-  margin-bottom: 100px;
   background-color: var(--color-white);
   border: 2px solid var(--color-black);
   display: grid;
@@ -67,7 +67,7 @@
 }
 
 .card__title {
-  height: 28px;
+  height: 25px;
   padding: 5px 10px;
   margin-top: 2px;
   margin-bottom: 2px;
@@ -84,10 +84,11 @@
 .card__picture {
   position: relative;
   width: 100%;
-  border-width: 2px 0px 2px 0px;
+  height: var(--card-picture-height);
+  border-block: 2px;
   border-style: solid;
   border-color: var(--color-black);
-  /*border-block: 2px;*/
+  
 }
 
 .card__label {
@@ -153,28 +154,33 @@
 .card__content {
   display: grid;
   grid-template-rows: repeat(3,auto);
-  padding: 25px;
   gap: 25px;
+  padding: 25px;
 }
 
 .card__button-container {
+  inline-size: 152px;
+  block-size: 38px;
   justify-self: end;
   align-self: center;
+  margin-right: 25px; 
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 5px;
-  align-items: center;
+  gap: 7px;
 }
 
 .card__icon-button {
   width: 40px;
   height: 38px;
+  justify-self: center;
+  align-self: center;
   color: var(--color-black);
   background: transparent;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
   cursor: pointer;
-}
+  box-sizing: border-box;
+ }
 
 .card__icon-button:focus-visible {
   border-color: var(--color-black);
@@ -216,8 +222,8 @@
   width: 0%;
   height: 100%;
   background-color: var(--color-black);
- transition: width 0.5s ease-in-out; 
- z-index: 1;
+  transition: width 0.5s ease-in-out;
+  z-index: 1;
 }
 
 .button:hover::after {
@@ -238,6 +244,8 @@
   width: 130px;
   height: 38px;
   padding: 9px 17px;
+  justify-self: center;
+  align-self: center;
 }
 
 .footer__button {
@@ -289,10 +297,10 @@ dialog[open] {
 .dialog__content {
   inline-size: var(--dialog-content-width);
   block-size: 63px;
-  display: grid;
-  grid-template-columns: repeat(2, auto);
   justify-self: center;
   align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, auto);  
   gap: 8px;
 }
 
@@ -382,6 +390,7 @@ dialog[open] {
   :root {
     /*--page-padding: 0;*/
     --block-width: 375px;
+    --card-picture-height: 375px;
     --header-min-height: 327px;
     --footer-button-width: 306px;
     --footer-button-height: 84px;
