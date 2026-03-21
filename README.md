@@ -1,1 +1,1 @@
-https://github.com/magic-turquoise/zakrivayuschiy-teg-f
+https://magic-turquoise.github.io/zakrivayuschiy-teg-f/
