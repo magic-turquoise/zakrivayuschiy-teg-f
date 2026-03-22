@@ -78,7 +78,7 @@
 
 .card__text {
   font-size: 18px;
-  font-variation-settings: "wght" var(--font-inter-weight-text);  
+  font-variation-settings: "wght" var(--font-inter-weight-text);
   line-height: 21px;
 }
 
