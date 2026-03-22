@@ -14,6 +14,7 @@
 --content-gap: 51px;
 --card-title-padding: 4px 10px;
 --card-title-line-height: 120%;
+--card-text-width: clamp(20.063rem, 12.91rem + 30.516vi, 40.375rem);
 --card-picture-height: 375px;
 --footer-button-width: clamp(19.125rem, 18.487rem + 2.723vi, 20.938rem);
 --dialog-window-width: clamp(21.313rem, 21.048rem + 1.127vi, 22.063rem);
