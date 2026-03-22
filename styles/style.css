@@ -19,8 +19,6 @@
   margin: 0;
   display: grid;
   grid-template-rows: repeat(2, auto);
-  /*justify-content: center;*/
-  /*gap: 95px;*/
   padding: 100px var(--page-padding-left);  
 }
 
@@ -409,14 +407,11 @@ dialog[open] {
     --card-title-padding: 5px 10px;
     --card-title-line-height: 100%;
     --card-picture-height: 700px;
-    
-  }
- 
+  } 
 
 .footer__button {
   grid-template-columns: repeat(2, auto); 
   row-gap: 0px;
   column-gap: 8px;
   }
-
   }

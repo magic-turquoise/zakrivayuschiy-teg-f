@@ -7,11 +7,10 @@
 --page-gradient: linear-gradient(#e7e7e7, #1a1a1a),
                  repeating-linear-gradient(#d3d3d3, transparent 2px),
                  repeating-linear-gradient(to right, #d3d3d3, transparent 2px);
-
---page-padding-left: clamp(0rem, -8.143rem + 34.742vi, 23.125rem);  
---header-grid-row: clamp(7.625rem, 7.449rem + 0.751vi, 8.125rem);   
---header-title-font-size: clamp(3.063rem, 2.71rem + 1.502vi, 4.063rem);  
---header-subtitle-font-size: clamp(0.875rem, 0.677rem + 0.845vi, 1.438rem);        
+--page-padding-left: clamp(0rem, -8.143rem + 34.742vi, 23.125rem);
+--header-grid-row: clamp(7.625rem, 7.449rem + 0.751vi, 8.125rem);
+--header-title-font-size: clamp(3.063rem, 2.71rem + 1.502vi, 4.063rem);
+--header-subtitle-font-size: clamp(0.875rem, 0.677rem + 0.845vi, 1.438rem);
 --content-gap: 51px;
 --card-title-padding: 4px 10px;
 --card-title-line-height: 120%;
