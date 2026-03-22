@@ -19,7 +19,7 @@
   margin: 0;
   display: grid;
   grid-template-rows: repeat(2, auto);
-  padding: 100px var(--page-padding-left);  
+  padding: 100px var(--page-padding-left);
 }
 
 .header {
@@ -27,7 +27,7 @@
   border: 2px solid var(--color-black);
   display: grid;
   grid-template-rows: var(--header-grid-row) min-content var(--header-grid-row);
-  font-family: var(--font-press-name), fantasy;
+  font-family: var(--font-name-accent), sans-serif;
   color: var(--color-black);
   font-weight: 400;
   text-transform: uppercase;
@@ -46,7 +46,7 @@
 
 .header__title {
   font-size: var(--header-title-font-size);
-  line-height: 100%;  
+  line-height: 100%;
 }
 
 .header__subtitle {
@@ -65,20 +65,20 @@
   display: grid;
   border: 2px solid var(--color-black);
   background-color: var(--color-white);
-  font-family: var(--font-inter-name), 'Arial', 'Helvetica', sans-serif;
+  font-family: var(--font-name-main), fantasy;
 }
 
 .card__title {
   padding: var(--card-title-padding);
   margin-block-start: 2px;
   font-size: 18px;
-  font-weight: var(--font-inter-weight-title);
+  font-variation-settings: "wght" var(--font-inter-weight-title);
   line-height: var(--card-title-line-height);
 }
 
 .card__text {
-  font-weight: var(--font-inter-weight-text);
   font-size: 18px;
+  font-variation-settings: "wght" var(--font-inter-weight-text);  
   line-height: 21px;
 }
 
@@ -95,7 +95,7 @@
   position: absolute;
   inset-block-start: 25px;
   inset-inline-end: 25px;
-  font-family: var(--font-press-name), fantasy;
+  font-family: var(--font-name-accent), sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
@@ -117,7 +117,6 @@
 
 .card__picture-image {
   width: 100%;
-  /*aspect-ratio: 1 / 1;*/
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -199,7 +198,7 @@
   color: var(--color-black);
   border: 2px solid var(--color-black);
   background: transparent;
-  font-family:  var(--font-press-name);
+  font-family:  var(--font-name-accent), sans-serif;
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -210,13 +209,14 @@
   box-shadow: 2px 2px 0px 0px var(--color-black);
 }
 
-/********************ИЗМЕНЕНИЕ ЦВЕТА КНОПОК**************************/
-
-
 .button:hover {
   transition: background-color 0.5s ease-in-out;
- }
-
+}
+  
+.button:hover::after {
+  width: 100%;
+}
+ 
 .button::after {
   content: '';
   position: absolute;
@@ -228,10 +228,6 @@
   background-color: var(--color-black);
   transition: width 0.5s ease-in-out;
   z-index: 1;
-}
-
-.button:hover::after {
-  width: 100%;
 }
 
 .button__text {
@@ -258,7 +254,7 @@
   align-self: center;
   padding: 15px 20px;
   display: grid;
-  grid-template-rows: repeat(2, auto);  
+  grid-template-rows: repeat(2, auto);
   row-gap: 8px;
   background-color: var(--color-white);
 }
@@ -297,7 +293,7 @@ dialog::backdrop {
 dialog[open] {
   inline-size: var(--dialog-window-width);
   padding: 30px var(--dialog-window-padding-left);
-  border: 2px solid var(--color-black);  
+  border: 2px solid var(--color-black);
   display: grid;
   justify-self: center;
   gap: 30px;
@@ -323,7 +319,7 @@ dialog[open] {
   display: block;
   justify-self: center;
   align-self: center;
-  font-family: var(--font-press-name), sans-serif;
+  font-family: var(--font-name-accent), sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
@@ -399,19 +395,14 @@ dialog[open] {
 
 @media (min-width: 1440px) {
   :root {
-    /*--block-width: 700px;*/
-    /*--page-padding: 100px 370px 100px 370px;*/
-    /*--header-grid-row: 130px;*/
-    /*--header-title-font-size: 65px;*/
-    /*--header-subtitle-font-size: 23px;*/
     --card-title-padding: 5px 10px;
     --card-title-line-height: 100%;
     --card-picture-height: 700px;
   } 
 
 .footer__button {
-  grid-template-columns: repeat(2, auto); 
+  grid-template-columns: repeat(2, auto);
   row-gap: 0px;
   column-gap: 8px;
   }
-  }
+}

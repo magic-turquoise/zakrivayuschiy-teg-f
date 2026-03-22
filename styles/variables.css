@@ -1,10 +1,10 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
---font-inter-name: 'Inter-Variable';
---font-press-name: 'PressStart2P';
+--font-name-main: 'Inter-Variable';
+--font-name-accent: 'PressStart2P';
 --font-inter-weight-title: 715;
 --font-inter-weight-text: 410;
---page-gradient: linear-gradient(#e7e7e7, #1a1a1a),
+--page-gradient: linear-gradient(#e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%),
                  repeating-linear-gradient(#d3d3d3, transparent 2px),
                  repeating-linear-gradient(to right, #d3d3d3, transparent 2px);
 --page-padding-left: clamp(0rem, -8.143rem + 34.742vi, 23.125rem);
@@ -17,12 +17,9 @@
 --card-picture-height: 375px;
 --footer-button-width: clamp(19.125rem, 18.487rem + 2.723vi, 20.938rem);
 --dialog-window-width: clamp(21.313rem, 21.048rem + 1.127vi, 22.063rem);
-/*--dialog-window-padding-left: clamp(2.5rem, 2.72rem + -0.939vi, 1.875rem);*/
 --dialog-content-width: clamp(16.313rem, 15.608rem + 3.005vi, 18.313rem);
 --dialog-button-width: clamp(16.313rem, 15.608rem + 3.005vi, 18.313rem);
 --dialog-window-padding-left: clamp(30px, 40px - 0.7vw, 40px);
-
-
 --color-black: #000;
 --color-white: #fff;
 --heart-countour-color: #000;
@@ -32,33 +29,4 @@
 --heart-main-body-hover-color: #000;
 --heart-core-active-color: #ff0000;
 --heart-main-body-active-color: #ff0000;
-
-/*--block-width: 375px;
---block-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
---header-title-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
---header-subtitle-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
---header-grid-row: 122px;
---header-title-font-size: 49px;
---header-subtitle-font-size: 14px;
-
---footer-button-width: 335px;
---footer-button-height: 55px;
---dialog-window-width: 353px;
---dialog-content-width: 293px;
---dialog-button-width: 293px;
-*/
 }
-
-/********************
-<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" fill="none" viewBox="0 0 39 39">
-  <symbol id="disk">
-    <path fill="currentColor" d="M0 0h3v3H0zM0 3h3v3H0zM0 6h3v3H0zM0 9h3v3H0zM0 12h3v3H0zM0 15h3v3H0zM0 18h3v3H0zM0 21h3v3H0zM0
-                24h3v3H0zM0 27h3v3H0zM0 30h3v3H0zM0 33h3v3H0zM0 36h3v3H0zM33 0v3h-3V0zM30 0v3h-3V0zM27 0v3h-3V0zM24 0v3h-3V0zM21 0v3h-3V0zM18
-                0v3h-3V0zM15 0v3h-3V0zM12 0v3H9V0zM9 0v3H6V0zM6 0v3H3V0zM36 3v3h-3V3zM9 6v3H6V6zM9 3v3H6V3zM9 9v3H6V9zM30 6v3h-3V6zM30
-                3v3h-3V3zM30 9v3h-3V9zM24 6v3h-3V6zM24 3v3h-3V3zM24 9v3h-3V9zM30 12v3h-3v-3zM27 12v3h-3v-3zM24 12v3h-3v-3zM21 12v3h-3v-3zM18 12v3h-3v-3zM15 12v3h-3v-3zM12 12v3H9v-3zM9 12v3H6v-3zM33 21v3h-3v-3zM30 21v3h-3v-3zM27 21v3h-3v-3zM24 21v3h-3v-3zM21 21v3h-3v-3zM18 21v3h-3v-3zM15 21v3h-3v-3zM12 21v3H9v-3zM9 21v3H6v-3zM33 24v3h-3v-3zM9 24v3H6v-3zM33 27v3h-3v-3zM9 27v3H6v-3zM33 30v3h-3v-3zM9 30v3H6v-3zM9 33v3H6v-3zM33 33v3h-3v-3zM36 36v3h-3v-3zM33 36v3h-3v-3zM30 36v3h-3v-3zM27 36v3h-3v-3zM24 36v3h-3v-3zM21 36v3h-3v-3zM18 36v3h-3v-3zM15 36v3h-3v-3zM12 36v3H9v-3zM9 36v3H6v-3zM6 36v3H3v-3zM39 39h-3v-3h3zM39 36h-3v-3h3zM39 33h-3v-3h3zM39 30h-3v-3h3zM39 27h-3v-3h3zM39 24h-3v-3h3zM39 21h-3v-3h3zM39 18h-3v-3h3zM39 15h-3v-3h3zM39 12h-3V9h3zM39 9h-3V6h3z"/>
-  </symbol>
-</svg>
-
-
-**************************/
-
