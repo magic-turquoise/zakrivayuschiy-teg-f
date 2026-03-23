@@ -4,11 +4,12 @@
 --font-name-accent: 'PressStart2P';
 --font-inter-weight-title: 715;
 --font-inter-weight-text: 410;
---page-gradient: linear-gradient(#e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%),
-                 repeating-linear-gradient(#d3d3d3, transparent 2px),
-                 repeating-linear-gradient(to right, #d3d3d3, transparent 2px);
+--page-gradient: linear-gradient(to bottom #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%),
+                 repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+                 repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px);
 --page-padding-left: clamp(0rem, -8.143rem + 34.742vi, 23.125rem);
---header-grid-row: clamp(7.625rem, 7.449rem + 0.751vi, 8.125rem);
+--header-padding-top:  clamp(7.625rem, 7.449rem + 0.751vi, 8.125rem);
+--header-padding-left: clamp(1rem, -1.344rem + 10vi, 7.656rem);
 --header-title-font-size: clamp(3.063rem, 2.71rem + 1.502vi, 4.063rem);
 --header-subtitle-font-size: clamp(0.875rem, 0.677rem + 0.845vi, 1.438rem);
 --content-gap: 51px;
@@ -17,6 +18,7 @@
 --card-text-width: clamp(20.063rem, 12.91rem + 30.516vi, 40.375rem);
 --card-picture-height: 375px;
 --footer-button-width: clamp(19.125rem, 18.487rem + 2.723vi, 20.938rem);
+--footer-button-floppy: clamp( 1.313rem, 1.904rem + -0.657vi, 1.75rem);
 --dialog-window-width: clamp(21.313rem, 21.048rem + 1.127vi, 22.063rem);
 --dialog-content-width: clamp(16.313rem, 15.608rem + 3.005vi, 18.313rem);
 --dialog-button-width: clamp(16.313rem, 15.608rem + 3.005vi, 18.313rem);
