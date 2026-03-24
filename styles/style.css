@@ -292,6 +292,7 @@ dialog[open] {
   display: grid;
   justify-self: center;
   gap: 30px;
+  max-width: none;
 }
 
 .dialog__content {

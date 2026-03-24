@@ -21,9 +21,8 @@
 --footer-button-floppy: clamp( 1.313rem, 1.904rem + -0.657vi, 1.75rem);
 --dialog-window-width: clamp(21.313rem, 21.048rem + 1.127vi, 22.063rem);
 --dialog-content-width: clamp(16.313rem, 15.608rem + 3.005vi, 18.313rem);
---dialog-content-text-width: clamp(12.25rem, 11.414rem + 3.568vi, 14.625rem);
 --dialog-button-width: clamp(16.313rem, 15.608rem + 3.005vi, 18.313rem);
---dialog-window-padding-left: clamp(1.875rem, 2.213rem + -0.376vi, 2.125rem);
+--dialog-window-padding-left: clamp( 1.75rem, 2.595rem + -0.939vi, 2.375rem);
 --color-black: #000;
 --color-white: #fff;
 --heart-countour-color: #000;
