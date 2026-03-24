@@ -4,9 +4,10 @@
 --font-name-accent: 'PressStart2P';
 --font-inter-weight-title: 715;
 --font-inter-weight-text: 410;
---page-gradient: repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
-                 repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
-                 linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);               
+--page-gradient:
+  repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+  repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+  linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
 --page-padding-left: clamp(0rem, -8.143rem + 34.742vi, 23.125rem);
 --header-padding-top:  clamp(7.625rem, 7.449rem + 0.751vi, 8.125rem);
 --header-padding-left: clamp(1rem, -1.344rem + 10vi, 7.656rem);
